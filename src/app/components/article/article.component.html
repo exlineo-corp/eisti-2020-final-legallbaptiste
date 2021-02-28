@@ -1,0 +1,35 @@
+<section class="jumbotron text-center">
+  <div class="container">
+    <h1 class="jumbotron-heading">Article Angular</h1>
+    <p class="lead text-muted">
+      Le but de ce projet est de se familiariser avec Angular.<br />
+      Pour cela j'ai crée un système de visualisation d'article.
+    </p>
+  </div>
+  <button
+    type="button"
+    class="btn btn-sm btn-outline-secondary"
+    (click)="navigateToEditArticle(article.id)"
+  >
+    Editer l'article
+  </button>
+</section>
+
+<div class="container">
+  <div class="row">
+    <img
+      [src]="getImageCurrentArticle()"
+      [alt]="getImageCurrentArticle()"
+      width="700em"
+      height="350em"
+    />
+  </div>
+  <div class="row">
+    <h1>{{ getTitleCurrentArticle() }}</h1>
+  </div>
+  <div class="row">
+    <div class="col">
+      <p [innerHtml]="getDescriptionCurrentArticle()"></p>
+    </div>
+  </div>
+</div>

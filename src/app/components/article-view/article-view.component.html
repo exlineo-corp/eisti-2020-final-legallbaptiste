@@ -1,0 +1,14 @@
+<div class="card mb-4 box-shadow">
+  <img
+    [src]="article.image"
+    alt="image"
+    class="card-img-top"
+    width="200"
+    height="200"
+  />
+  <div class="card-body">
+    <h1>{{ article.title }}</h1>
+    <p class="card-text" [innerHtml]="displayDescription()"></p>
+    <div class="d-flex justify-content-between align-items-center"></div>
+  </div>
+</div>

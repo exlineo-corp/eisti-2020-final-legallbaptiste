@@ -1,0 +1,35 @@
+<section class="jumbotron text-center">
+  <div class="container">
+    <h1 class="jumbotron-heading">Article Angular</h1>
+    <p class="lead text-muted">
+      Le but de ce projet est de se familiariser avec Angular.<br />
+      Pour cela j'ai crée un système de visualisation d'article.
+    </p>
+  </div>
+</section>
+<h1 class="text-center">Edition d'un article</h1>
+<div class="container">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="form-row">
+      <div class="form-group col">
+        <label>Title</label>
+        <input type="text" formControlName="title" class="form-control" />
+      </div>
+      <div class="form-group col-5">
+        <label>Description</label>
+        <input type="text" formControlName="description" class="form-control" />
+      </div>
+      <div class="form-group col-5">
+        <label>Image</label>
+        <input type="text" formControlName="image" class="form-control" />
+      </div>
+    </div>
+    <div class="form-group">
+      <button class="btn btn-primary">
+        <span class="spinner-border spinner-border-sm mr-1"></span>
+        Sauvegarder
+      </button>
+      <a routerLink="/accueil" class="btn btn-link">Annuler</a>
+    </div>
+  </form>
+</div>

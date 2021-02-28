@@ -1,0 +1,41 @@
+<main role="main">
+  <section class="jumbotron text-center">
+    <div class="container">
+      <h1 class="jumbotron-heading">Article Angular</h1>
+      <p class="lead text-muted">
+        Le but de ce projet est de se familiariser avec Angular. <br />
+        Pour cela j'ai créé un système de visualisation d'article.
+      </p>
+      <button
+        type="button"
+        class="btn btn-sm btn-outline-secondary"
+        (click)="navigateToAddArticle()"
+      >
+        Ajouter un article
+      </button>
+    </div>
+  </section>
+
+  <div class="album py-5 bg-light">
+    <div class="container">
+      <div class="row">
+        <div *ngFor="let article of articles" class="col-md-4">
+          <app-article-preview
+            [article]="article"
+            (click)="openArticle(article)"
+          >
+          </app-article-preview>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container" style="text-align: center;">
+    <h1>
+      Ouvrez le terminal et regardez ce qu'il se passe lorsque vous cliquez sur
+      les boutons
+    </h1>
+    <h2>Les intercepteurs peuvent récupérer la ressource de la page</h2>
+    <button (click)="validMethod()">Methode 1</button>
+    <button (click)="failMethod()">Methode 2</button>
+  </div>
+</main>
